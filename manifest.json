@@ -1,67 +1,22 @@
 {
   "name": "TruckParts Pro",
   "short_name": "TruckParts",
-  "description": "El Catálogo Oficial de Repuestos a un Clic - Base de datos OEM completa con búsqueda por VIN",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-or-landscape",
-  "theme_color": "#0066cc",
   "background_color": "#1e293b",
+  "theme_color": "#0066cc",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "icons/icon-192x192.jpg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "icons/icon-512x512.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-192x192-maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icons/icon-512x512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/screenshot-540x720.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/screenshots/screenshot-1280x720.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Ingresar al Sistema EPC",
-      "short_name": "EPC Login",
-      "description": "Acceso rápido al sistema de repuestos",
-      "url": "/?utm_source=pwa_shortcut",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    }
-  ],
-  "categories": ["productivity", "business"]
+  ]
 }
