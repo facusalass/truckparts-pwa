@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruckParts Pro - El Catálogo Oficial de Repuestos</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066cc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TruckParts Pro">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom color variables for brand consistency */
+        :root {
+            --dark-slate: #1e293b;
+            --medium-slate: #334155;
+            --silver: #f1f5f9;
+            --accent-blue: #0066cc;
+            --accent-blue-dark: #0052a3;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+        }
+
+        /* Smooth transitions and animations */
+        * {
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+        }
+
+        /* Hero section background with subtle gradient */
+        .hero-bg {
+            background: linear-gradient(135deg, var(--dark-slate) 0%, var(--medium-slate) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Primary CTA Button - Critical styling */
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-blue-dark);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--accent-blue);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background-color: var(--silver);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue);
+            font-size: 32px;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: var(--dark-slate);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+
+        .navbar-brand span {
+            color: var(--accent-blue);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: var(--dark-slate);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 24px;
+        }
+
+        /* Responsive utilities */
+        @media (max-width: 768px) {
+            .hero-bg {
+                padding: 40px 20px;
+            }
+
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 16px;
+            }
+
+            .feature-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- ============================================ -->
+    <!-- NAVBAR SECTION -->
+    <!-- ============================================ -->
+    <nav class="sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-start">
+                <div class="navbar-brand">
+                    Truck<span>Parts</span>Pro
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section class="hero-bg text-white py-24 md:py-32 lg:py-40">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <!-- Main Headline -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                El Catálogo Oficial de Repuestos
+                <span class="block text-blue-400">a un Clic</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl leading-relaxed">
+                Accedé a la base de datos OEM más completa del mercado. 
+                Búsqueda exacta por número de Chasis (VIN) y despiece oficial en tiempo real.
+            </p>
+
+            <!-- Primary CTA Button - CRITICAL: Must be <a> tag with exact href -->
+            <a href="https://www.partslink24.com/pl24-app/login" target="_blank" class="btn-primary">
+                Ingresar al Sistema EPC
+            </a>
+
+            <!-- Additional Info Text -->
+            <p class="text-sm text-gray-400 mt-6">
+                ✓ Acceso seguro | ✓ Base de datos actualizada | ✓ Soporte 24/7
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FEATURES SECTION -->
+    <!-- ============================================ -->
+    <section class="py-20 md:py-32 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">
+                    Características Principales
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Diseñado para profesionales de la industria automotriz pesada
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature Card 1: VIN Search -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        🔍
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">
+                        Búsqueda por VIN
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Precisión absoluta sin margen de error. Encuentra exactamente los repuestos que necesitas 
+                        con solo ingresar el número de Chasis.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2: Multi-brand Catalog -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        📦
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">
+                        Catálogo Multimarca
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Mercedes-Benz y las principales marcas pesadas. Cobertura completa del mercado 
+                        con miles de componentes disponibles.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3: Cloud Access -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        ☁️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">
+                        En la Nube
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Acceso 24/7 sin instalaciones pesadas. Trabaja desde cualquier dispositivo, 
+                        en cualquier momento, sin descargas ni configuraciones complejas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA SECONDARY SECTION -->
+    <!-- ============================================ -->
+    <section class="hero-bg text-white py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                ¿Listo para optimizar tu gestión de repuestos?
+            </h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Únete a cientos de profesionales que ya confían en nuestro sistema
+            </p>
+            <a href="https://www.partslink24.com/pl24-app/login" target="_blank" class="btn-primary">
+                Ingresar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER SECTION -->
+    <!-- ============================================ -->
+    <footer>
+        <p>&copy; 2026 TruckParts Pro. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Service Worker Registration for PWA -->
+    <script>
+        // Register Service Worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('[PWA] Service Worker registered successfully:', registration);
+                    })
+                    .catch((error) => {
+                        console.error('[PWA] Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
